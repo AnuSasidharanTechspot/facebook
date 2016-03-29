@@ -39,7 +39,7 @@ class Register_user extends CI_Controller {
             	{
              		$result=array("Error"=>"Invalid input format for first name");
                 }
-                else if(!preg_match("/^[a-zA-Z'-]+$/",$user['vchr_last_name']))
+                else if(!preg_match("/[^A-Za-z]/",$user['vchr_last_name']))
             	{
              		$result=array("Error"=>"Invalid input format for last name");
                 }
